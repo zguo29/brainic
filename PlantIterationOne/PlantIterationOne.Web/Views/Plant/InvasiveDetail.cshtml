@@ -1,0 +1,78 @@
+﻿@model Invasive
+@{
+    ViewBag.Title = "Invasive Detail";
+}
+<div style="border: rgb(209,230,251) solid ;margin-left: 35px; margin-right: -8px;position: relative; z-index: -1">
+</div>
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <form>
+            <div class="form-group row" style="width:200px">
+                <label class="col-sm-3 col-form-label" asp-for="ImageUrl"></label>
+                <div class="col-sm-9">
+                    <img src="@Model.ImageUrl" style="height: 150px; width: 150px;" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Name"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Name</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="ScientificName"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.ScientificName</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Habitat"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Habitat</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Origin"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Origin</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Colour"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Colour</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Spreads"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Spreads</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Impacts"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.Impacts</h6>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="WeedControl"></label>
+                <div class="col-sm-9">
+                    <h6>@Model.WeedControl</h6>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <a asp-action="InvasiveList" class="btn btn-secondary">Back To List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>

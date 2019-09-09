@@ -1,0 +1,13 @@
+﻿@model Native
+
+    <div class="card" style="width: 100%;  ">
+        <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name">
+        <div class="card-body">
+            <h5 class="card-title">@Model.BotanicalName</h5>
+            <p class="card-text">
+
+            </p>
+            <a asp-action="NativeDetail" asp-route-id="@Model.Id" class="btn btn-secondary">Detail</a>
+            <a asp-action="NativeEdit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+        </div>
+    </div>

@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div style="border: rgb(209,230,251) solid ;margin-left: 35px; margin-right: -8px;position: relative; z-index: -1">
+</div>
+
+<div class="row" style="margin-top: 10px; margin-left:35px">
+    <!--幻灯片-->
+    <div class="col-8">
+        <div class="row slide-container">
+            <input class="input-slide" type="radio" id="i1" name="images" checked />
+            <input class="input-slide" type="radio" id="i2" name="images" />
+
+            <div class="slide_img" id="one">
+                <a asp-controller="Home" asp-action="Harbour">Are you harbouring know villains in your garden?</a>
+                <img class="inner-image" src="~/resources/img/slide1.png" />
+            </div>
+
+            <div class="slide_img" id="two">
+                <a asp-controller="Home" asp-action="NativePlants">Why choose native plants?</a>
+                <img class="inner-image" src="~/resources/img/slide2.png" />
+            </div>
+            <div id="nav_slide">
+                <label for="i1" class="dots" id="dot1"></label>
+                <label for="i2" class="dots" id="dot2"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4" style=" position:relative;">
+        <div class="row div-home-left" style="background-color: rgb(32,169,218)">
+            <h4 class="headings-left" style="margin-top:80px"><a style="margin-left:35px; margin-top:150px; color:#FFFFFF;" asp-controller="Weed" asp-action="Index">WEED MANAGEMENT</a></h4>
+            <!--<p style="color: #FFFFFF">We offer you plants in Victoria</p>-->
+        </div>
+        <div class="row div-home-bottom">
+            <h4 class="headings-bot" style="margin-top:80px"><a style="margin-left:60px; margin-top:150px; color:#FFFFFF;" asp-controller="Weed" asp-action="WeedReport">REPORT WEED</a></h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="margin-top: 10px; margin-left: 7px">
+    <div class="col-8">
+        <div class="col-4 three-nav">
+            <div class="img-nav">
+                <a asp-controller="Plant" asp-action="Category">
+                    <img src="~/resources/img/yellow.png" style="width: 250px" />
+                </a>
+            </div>
+            <div class="desc">
+                <a class="text-6" asp-controller="Plant" asp-action="Category">Plants Catalogue</a>
+                <p class="introduction-desc">
+                    Find right plants for your garden. 
+                </p>
+            </div>
+        </div>
+        <div class="col-4 three-nav">
+            <div class="img-nav">
+                <a asp-controller="GardenCare" asp-action="Index">
+                    <img src="~/resources/img/Gardens-Care.jpg" style="width: 250px" />
+                </a>
+            </div>
+            <div class="desc" style="margin-top: -57px">
+                <a class="text-6" asp-controller="GardenCare" asp-action="Index">Garden Care</a>
+                <p class="introduction-desc">
+                    Explore good gardening practises to thrive your garden. 
+                </p>
+            </div>
+
+        </div>
+        <div class="col-4 three-nav">
+            <div class="img-nav">
+                <a asp-controller="Home" asp-action="News">
+                    <img src="~/resources/img/Garden-Maintanance.jpg" style="width: 250px" />
+                </a>
+            </div>
+            <div class="desc" style="margin-top: -32px">
+                <a class="text-6" asp-controller="Home" asp-action="News">Latest News</a>
+                <p class="introduction-desc">We Provide Latest News and Updated Events Relate to Plant</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <div class="right-bottom">
+                <div style="float: left;"><img src="~/resources/img/clouds.png" style="width: 70px; margin-top: 10px; margin-left: 30px"></div>
+                <div style="float: left"><a style="margin-left: 30px; margin-top: 30px" a asp-controller="Home" asp-action="Weather">Weather Forecast</a></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="right-bottom" style="margin-top: -3px;margin-left: 15px;">
+                    <div style="float: left;"><img src="~/resources/img/events.png" style="width: 70px; margin-top: 10px; margin-left: 30px"></div>
+                    <div style="float: left; margin-left: 45px; margin-top: 30px"><a asp-controller="Home" asp-action="News">Events & News</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row" style="text-align:center; color:rgb(32,169,218); margin-left:530px"><h6>All Rights Reserved @@2019 Brainic</h6></div>

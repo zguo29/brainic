@@ -1,0 +1,23 @@
+﻿@model List<Native>
+
+
+<div style="border: rgb(209,230,251) solid ;margin-left: 35px; margin-right: -8px;position: relative; z-index: -1">
+</div>
+
+
+<div class="row" style="text-align:center; margin-top:50px">
+    <div class="col"><h5 style="color: rgb(32,169,218);">Native Plant List</h5></div>
+</div>
+
+
+<div class="container" style="margin-top:60px;margin-left:60px; margin-right:60px">
+
+    <div class="row">
+        @foreach (var n in @Model)
+        {
+            <div class="col-sm-12 col-md-6 col-lg-4 py-3 px-lg-5 ">
+                <partial name="_NativeCard" model="n" />
+            </div>
+        }
+    </div>
+</div>

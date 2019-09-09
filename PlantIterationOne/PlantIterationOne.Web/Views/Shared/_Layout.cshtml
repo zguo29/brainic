@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/resources/css/style.css" rel="stylesheet" />
+    <link href="~/resources/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ec26660a70.js"></script>
+</head>
+<body>
+    <div class="">
+        <div class="row" style="position: relative">
+            <div class="col-2 logo-block">
+                <img class="logo" src="~/resources/img/Logo.png" />
+            </div>
+            <div class="menu-bar col-8">
+                <ul>
+                    <li class="li-1"><a class="text-1" asp-controller="Home" asp-action="Index">HOME</a></li>
+                    <li class="li-1">
+                        <a class="text-1" asp-controller="Home" asp-action="VicFlora">VICTORIAN FLORA</a>
+                    </li>
+                    <li class="li-1">
+                        <a class="text-1" asp-controller="Plant" asp-action="Category">VICTORIAN PLANTS</a>
+                    </li>
+                    <li class="li-1"><a class="text-1" asp-controller="GardenCare" asp-action="Index">GARDEN CARE</a></li>
+                    <li class="li-1"><a class="text-1" asp-controller="Weed" asp-action="Index">WEED MANAGEMENT</a></li>
+                    <li class="li-1"><a class="text-1" asp-controller="Home" asp-action="About">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <div class="row" style="display: flex; justify-content: center; vertical-align: central">
+                    <form class="form-inline" style="margin-top: 23px">
+                        <input class="search-bar"
+                               style="width: 170px; border:rgb(32,169,218) solid; border-radius: .3em 0.3em 0.3em .3em;"
+                               type="search" placeholder="" aria-label="Search">
+                        <a asp-controller="Home" asp-action="Search"><i class="fas fa-search" style="color: rgb(32,169,218); margin-left: -20px"></i></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        
+    </div>
+    <script src="~/resources/js/bootstrap.bundle.js"></script>
+    <script src="~/resources/js/slides.js"></script>
+</body>
+</html>
